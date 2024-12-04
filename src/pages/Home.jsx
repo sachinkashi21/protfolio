@@ -56,9 +56,9 @@ const Home = () => {
             redirectUrl="/dashboard" 
           />
         </div>
-        <hr class="border-0 h-px bg-gray-300 dark:bg-gray-900 my-4 mx-auto w-3/4" />
+        <hr className="border-0 h-px bg-gray-300 dark:bg-gray-900 my-4 mx-auto w-3/4" />
         <About/>
-        <hr class="border-0 h-px bg-gray-100 dark:bg-gray-900 my-4 mx-auto w-3/4" />
+        <hr className="border-0 h-px bg-gray-100 dark:bg-gray-900 my-4 mx-auto w-3/4" />
       </div>
     </>
   );

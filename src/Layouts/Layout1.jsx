@@ -1,21 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Speeddial from '../components/Speeddial'
 import Footer from '../components/Footer'
 import Sidebar from '../components/Sidebar'
 import { Outlet } from 'react-router-dom';
 
-const Layout1 = ({children}) => {
+const Layout1 = () => {
+  const [isDrawerOpen, SetIsDrawerOpen] = useState(true);
+
+  let toggleDrawer = () => {
+    SetIsDrawerOpen(!isDrawerOpen);
+  }
   return (
     <>
-      <Navbar></Navbar>
-      <Sidebar></Sidebar>
+      <Navbar isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer}></Navbar>
+      <Sidebar isDrawerOpen={isDrawerOpen}></Sidebar>
       <div className="p-4 sm:ml-64 bg-gray-100 dark:bg-gray-900 text-gray-200">
-      <Outlet />
-        <Speeddial style={{ zIndex: 100 }} />
-        <Footer className="dark:bg-gray-800" />
+        <div
+          style={{
+            opacity:
+              window.matchMedia('(max-width: 640px)').matches && isDrawerOpen // Small screen check
+                ? 0.25
+                : 1,
+            transition: 'opacity 0.3s ease'
+          }}
+        >
+          <Outlet />
+          <Speeddial style={{ zIndex: 10 }} />
+          <Footer className="dark:bg-gray-800" />
+        </div>
       </div>
     </>
+
   )
 }
 
