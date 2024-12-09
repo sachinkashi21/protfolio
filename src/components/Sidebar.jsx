@@ -3,11 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { FaHouse, FaUserGraduate, FaDatabase } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa"
 
-const Sidebar = ({ isDrawerOpen }) => {
+const Sidebar = ({ isDrawerOpen, closeDrawer }) => {
    const navigate = useNavigate();
-   console.log(isDrawerOpen);
    return (
-      <aside id="logo-sidebar" className={`fixed top-0 left-0 z-40 h-screen pt-20 transition-transform ${isDrawerOpen
+      <aside onClick={closeDrawer} id="logo-sidebar" className={`fixed top-0 left-0 z-40 h-screen pt-20 transition-transform ${isDrawerOpen
             ? 'w-64 sm:translate-x-0'
             : 'w-0 sm:translate-x-0 sm:w-64'
          } bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}>

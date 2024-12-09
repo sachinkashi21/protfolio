@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Speeddial from '../components/Speeddial'
 import Footer from '../components/Footer'
@@ -8,14 +8,29 @@ import { Outlet } from 'react-router-dom';
 const Layout1 = () => {
   const [isDrawerOpen, SetIsDrawerOpen] = useState(true);
 
-  let toggleDrawer = () => {
-    SetIsDrawerOpen(!isDrawerOpen);
+  useEffect(()=>{
+    if(window.matchMedia('(max-width: 640px)').matches){
+      SetIsDrawerOpen(false);
+    }
+  },[])
+
+  let openDrawer = () => {
+    SetIsDrawerOpen(true);
   }
+
+  let closeDrawer=()=>{
+    if(window.matchMedia('(max-width: 640px)').matches){
+      SetIsDrawerOpen(false);
+    }
+  }
+  
   return (
     <>
-      <Navbar isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer}></Navbar>
-      <Sidebar isDrawerOpen={isDrawerOpen}></Sidebar>
-      <div className="p-4 sm:ml-64 bg-gray-100 dark:bg-gray-900 text-gray-200">
+      <Navbar isDrawerOpen={isDrawerOpen} toggleDrawer={openDrawer}></Navbar>
+      <Sidebar isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}></Sidebar>
+      <div className="p-4 sm:ml-64 bg-gray-100 dark:bg-gray-900 text-gray-200" 
+        onClick={closeDrawer}
+      >
         <div
           style={{
             opacity:

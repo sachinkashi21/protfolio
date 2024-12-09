@@ -1,12 +1,15 @@
 import React from 'react';
-import { FaGithub, FaLinkedin,  FaCode } from 'react-icons/fa';
+import { FaGithub, FaLinkedin,  FaCode, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 const Dashboard = () => {
     const profiles = [
-        { name: 'GitHub', icon: <FaGithub />, link: 'https://github.com/yourusername', details: '100+ Repositories' },
-        { name: 'LeetCode', icon: <FaCode />, link: 'https://leetcode.com/yourusername', details: '300+ Problems Solved' },
-        { name: 'GeeksforGeeks', icon: <FaCode />, link: 'https://auth.geeksforgeeks.org/user/yourusername', details: '200+ Articles' },
-        { name: 'LinkedIn', icon: <FaLinkedin />, link: 'https://linkedin.com/in/yourusername', details: 'Professional Network' },
+        { name: 'GitHub', icon: <FaGithub />, link: 'https://github.com/sachinkashi21/', details: '15+ Repositories, 50+ commits' },
+        { name: 'LeetCode', icon: <FaCode />, link: 'https://leetcode.com/u/sachin_kashi/', details: '300+ Problems, 1700+ rating' },
+        { name: 'GeeksforGeeks', icon: <FaCode />, link: 'https://www.geeksforgeeks.org/user/sachinkashi21/', details: '150+ Problems, 3 star' },
+        { name: 'LinkedIn', icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/sachinkashi21/', details: '350+ connections' },
+        { name: 'Facebook', icon: <FaFacebook />, link: 'https://www.facebook.com/profile.php?id=100089340547757', details:  '-'},
+        { name: 'Twitter', icon: <FaTwitter />, link: 'https://x.com/Sachin_kashi_21', details: '-' },
+        { name: 'Instagram', icon: <FaInstagram />, link: 'https://www.instagram.com/kashi_sachin_a/', details: '-'},
     ];
 
     return (

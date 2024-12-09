@@ -1,11 +1,18 @@
 import React from 'react';
-import { FaReact, FaNodeJs, FaDatabase, FaGitAlt } from 'react-icons/fa';
-import { SiMongodb, SiJavascript, SiLeetcode, SiHtml5, SiCss3, SiExpress, SiPython } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaJava, FaJs } from 'react-icons/fa';
+import { FaC } from 'react-icons/fa6';
+import { SiMongodb, SiJavascript, SiLeetcode, SiHtml5, SiCss3, SiExpress, SiPython, SiCplusplus, SiC, SiGeeksforgeeks } from 'react-icons/si';
 
 const skills = {
+  Languages: [
+    { name: "C++", icon: < SiCplusplus />, description: "" },
+    { name: "C", icon: < SiC />, description: "" },
+    { name: "Java", icon: < FaJava />, description: "" },
+    { name: "JavaScript", icon: < FaJs />, description: "" },
+  ],
   Frontend: [
     { name: "React", icon: <FaReact />, description: "Component-based UI development" },
-    { name: "JavaScript", icon: <SiJavascript />, description: "Core language of web applications" },
+    { name: "JS", icon: <SiJavascript />, description: "Core language of web applications" },
     { name: "HTML", icon: <SiHtml5 />, description: "Markup language for structuring content" },
     { name: "CSS", icon: <SiCss3 />, description: "Styling for a responsive and visually appealing UI" },
   ],
@@ -17,8 +24,7 @@ const skills = {
   ],
   DSA: [
     { name: "LeetCode", icon: <SiLeetcode />, description: "Platform for honing problem-solving skills" },
-    { name: "Python", icon: <SiPython />, description: "Python programming for data structures" },
-    { name: "Git", icon: <FaGitAlt />, description: "Version control for collaborative development" },
+    { name: "GFG", icon: <SiGeeksforgeeks />, description: "Platform for honing problem-solving skills" },
   ]
 };
 
