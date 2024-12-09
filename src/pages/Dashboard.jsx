@@ -1,7 +1,45 @@
 import React from 'react';
-import { FaGithub, FaLinkedin,  FaCode, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin,  FaCode, FaTwitter, FaFacebook, FaInstagram, FaBirthdayCake } from 'react-icons/fa';
 
-const Dashboard = () => {
+import Timeline from '../components/Timeline';
+import { VerticalTimeline } from 'react-vertical-timeline-component';
+
+const MyTimeline = () => {
+    const timeline = [
+      {
+        date: 'Feb 2004',
+        title: 'Born in Hubli, Karnataka',
+        icon: <FaBirthdayCake />,
+        description: 'Completed early education in native and later moved to Bengaluru along with family.',
+      },
+      {
+        date: '2020',
+        title: 'Joined Engineering at UVCE',
+        icon: <FaBirthdayCake />,
+        description: 'Started my journey as a Computer Science undergraduate.',
+      },
+    ];
+  
+    return (
+      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col items-center py-10">
+        <h1 className="text-4xl font-bold mb-8">My Timeline</h1>
+        <VerticalTimeline>
+          {timeline.map((e, index) => (
+            <Timeline
+              key={index}
+              date={e.date}
+              title={e.title}
+              icon={e.icon}
+              description={e.description}
+            />
+          ))}
+        </VerticalTimeline>
+        <div style={{ height: '150px' }}></div>
+      </div>
+    );
+  };
+
+const MyProfiles=()=>{
     const profiles = [
         { name: 'GitHub', icon: <FaGithub />, link: 'https://github.com/sachinkashi21/', details: '15+ Repositories, 50+ commits' },
         { name: 'LeetCode', icon: <FaCode />, link: 'https://leetcode.com/u/sachin_kashi/', details: '300+ Problems, 1700+ rating' },
@@ -11,7 +49,6 @@ const Dashboard = () => {
         { name: 'Twitter', icon: <FaTwitter />, link: 'https://x.com/Sachin_kashi_21', details: '-' },
         { name: 'Instagram', icon: <FaInstagram />, link: 'https://www.instagram.com/kashi_sachin_a/', details: '-'},
     ];
-
     return (
         <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col items-center py-10">
             <h1 className="text-4xl font-bold mb-8">My Profiles</h1>
@@ -36,6 +73,16 @@ const Dashboard = () => {
             </div>
             <div style={{height:"150px"}}> </div>
         </div>
+    )
+}
+
+const Dashboard = () => {
+    
+
+    return (<>
+        <MyTimeline/>    
+        <MyProfiles/>
+    </>
     );
 };
 

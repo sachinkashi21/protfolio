@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import photo from '../assets/some.webp';
 import { FaArrowRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+    const navigate=useNavigate();
     const [text, setText] = useState('');
     const typewritingText = "Annd I am a Full Stack Web Developer";
     const speed = 100; // typing speed in milliseconds
@@ -31,14 +33,14 @@ const Hero = () => {
                     <p id="typeWrite" className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
                         {text}
                     </p>
-                    <a href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 my-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-100 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Check Out
+                    <div onClick={() => navigate("/dashboard")} className="inline-flex items-center justify-center px-5 py-3 mr-3 my-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-100 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        About Me
                         &nbsp;
                         <FaArrowRight />
-                    </a>
-                    <a href="#" className="inline-flex items-center justify-center px-5 py-3 mx-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                        Speak to Sales
-                    </a>
+                    </div>
+                    <div onClick={() => navigate("/dashboard")} className="inline-flex items-center justify-center px-5 py-3 mx-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                        About Me
+                    </div>
                 </div>
                 <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                     <img src={photo} alt="mockup" />

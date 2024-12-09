@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { FaHouse, FaUserGraduate, FaDatabase } from "react-icons/fa6";
-import { FaCode } from "react-icons/fa"
+import { FaCode, FaSignInAlt, FaUser } from "react-icons/fa"
 
 const Sidebar = ({ isDrawerOpen, closeDrawer }) => {
    const navigate = useNavigate();
@@ -17,6 +17,12 @@ const Sidebar = ({ isDrawerOpen, closeDrawer }) => {
                      <div onClick={() => navigate("/")} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <FaHouse className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"/>
                         <span className="flex-1 ms-3 whitespace-nowrap">Home</span>
+                     </div>
+                  </li>
+                  <li>
+                     <div onClick={() => navigate("/dashboard")} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <FaUserGraduate className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"/>
+                        <span className="flex-1 ms-3 whitespace-nowrap">About Me</span>
                      </div>
                   </li>
                   <li>
@@ -38,21 +44,15 @@ const Sidebar = ({ isDrawerOpen, closeDrawer }) => {
                      </div>
                   </li>
                   <li>
-                     <div onClick={() => navigate("/certificate")} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <FaUserGraduate className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"/>
-                        <span className="flex-1 ms-3 whitespace-nowrap">Products</span>
+                     <div onClick={() => navigate("/login")} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <FaUser className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"/>
+                        <span className="flex-1 ms-3 whitespace-nowrap">Login</span>
                      </div>
                   </li>
                   <li>
-                     <div onClick={() => navigate("/certificate")} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <FaUserGraduate className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"/>
+                     <div onClick={() => navigate("/signup")} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <FaSignInAlt className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"/>
                         <span className="flex-1 ms-3 whitespace-nowrap">Signup</span>
-                     </div>
-                  </li>
-                  <li>
-                     <div onClick={() => navigate("/certificate")} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <FaUserGraduate className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"/>
-                        <span className="flex-1 ms-3 whitespace-nowrap">SignIn</span>
                      </div>
                   </li>
                   

@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section className="px-6 py-12 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold mb-4">About Me</h2>
+        <h2 className="text-3xl font-semibold mb-4">In short</h2>
         <p className="text-lg mb-6">
           I am a passionate web developer with a strong focus on the MERN stack. With experience in full-stack development, I
           enjoy creating interactive, user-friendly applications. My skill set includes not only technical expertise but also a
@@ -24,6 +24,7 @@ const About = () => {
           <p>Building dynamic and efficient web applications with React and Node.js.</p>
         </div>
       </div>
+
     </section>
   );
 };
