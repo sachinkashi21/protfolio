@@ -9,13 +9,16 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Certificates from './pages/Certificates';
 import Skills from './pages/Skills';
+import Dashboard from './pages/Dashboard';
 import NotFound from './pages/NotFound';
 import Layout1 from './Layouts/Layout1';
-import Dashboard from './pages/Dashboard';
+
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <>
+      
       <Routes>
         {/* Routes with Layout1 */}
         <Route element={<Layout1 />}>

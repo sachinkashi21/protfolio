@@ -5,6 +5,8 @@ import Footer from '../components/Footer'
 import Sidebar from '../components/Sidebar'
 import { Outlet } from 'react-router-dom';
 
+import ScrollToTop from '../components/ScrollToTop'
+
 const Layout1 = () => {
   const [isDrawerOpen, SetIsDrawerOpen] = useState(true);
 
@@ -30,7 +32,8 @@ const Layout1 = () => {
       <Sidebar isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}></Sidebar>
       <div className="p-4 sm:ml-64 bg-gray-100 dark:bg-gray-900 text-gray-200" 
         onClick={closeDrawer}
-      >
+        >
+        <ScrollToTop/>
         <div
           style={{
             opacity:
