@@ -7,21 +7,21 @@ const Speeddial = () => {
       name: "Resume",
       icon: <FaFile className="w-5 h-5" />,
       action: () => {
-        window.open("https://drive.google.com/file/d/1EAwsnczN2XmreRUG_lD53ZvDkyyfzPkJ/view?usp=sharing", "_blank");
+        window.open(import.meta.env.VITE_RESUME_LINK, "_blank");
       }, // Open Resume link in new tab
     },
     {
       name: "Mail",
       icon: <FaEnvelope className="w-5 h-5" />,
       action: () => {
-        window.location.href = "mailto:sachinkashi21@gmail.com";
+        window.location.href = `mailto:${import.meta.env.VITE_EMAIL}`;
       }, // Open mail client
     },
     {
       name: "Connect",
       icon: <FaLinkedin className="w-5 h-5" />,
       action: () => {
-        window.open("https://www.linkedin.com/in/sachinkashi21/", "_blank");
+        window.open(import.meta.env.VITE_LINKEDIN, "_blank");
       }, // Open LinkedIn in new tab
     },
   ];

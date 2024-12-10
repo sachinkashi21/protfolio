@@ -65,13 +65,13 @@ const MyTimeline = () => {
 
 const MyProfiles = () => {
     const profiles = [
-        { name: 'GitHub', icon: <FaGithub />, link: 'https://github.com/sachinkashi21/', details: '15+ Repositories, 50+ commits' },
-        { name: 'LeetCode', icon: <FaCode />, link: 'https://leetcode.com/u/sachin_kashi/', details: '300+ Problems, 1700+ rating' },
-        { name: 'GeeksforGeeks', icon: <FaCode />, link: 'https://www.geeksforgeeks.org/user/sachinkashi21/', details: '150+ Problems, 3 star' },
-        { name: 'LinkedIn', icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/sachinkashi21/', details: '350+ connections' },
-        { name: 'Facebook', icon: <FaFacebook />, link: 'https://www.facebook.com/profile.php?id=100089340547757', details: '-' },
-        { name: 'Twitter', icon: <FaTwitter />, link: 'https://x.com/Sachin_kashi_21', details: '-' },
-        { name: 'Instagram', icon: <FaInstagram />, link: 'https://www.instagram.com/kashi_sachin_a/', details: '-' },
+        { name: 'GitHub', icon: <FaGithub />, link: import.meta.env.VITE_GITHUB, details: '15+ Repositories, 50+ commits' },
+        { name: 'LeetCode', icon: <FaCode />, link: import.meta.env.VITE_LC, details: '300+ Problems, 1700+ rating' },
+        { name: 'GeeksforGeeks', icon: <FaCode />, link: import.meta.env.VITE_GFG, details: '150+ Problems, 3 star' },
+        { name: 'LinkedIn', icon: <FaLinkedin />, link: import.meta.env.VITE_LINKEDIN, details: '350+ connections' },
+        { name: 'Facebook', icon: <FaFacebook />, link: import.meta.env.VITE_FB, details: 'Sachin A' },
+        { name: 'Twitter', icon: <FaTwitter />, link: import.meta.env.VITE_X, details: '@Sachin_kashi_21' },
+        { name: 'Instagram', icon: <FaInstagram />, link: import.meta.env.VITE_IG, details: '@kashi_sachin_a' },
     ];
     return (
         <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col items-center py-10">
@@ -102,6 +102,9 @@ const MyProfiles = () => {
 
 const Aboutme = () => {
     return (<>
+        <div>
+
+        </div>
         <MyTimeline />
         <MyProfiles />
     </>
