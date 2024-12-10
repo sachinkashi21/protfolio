@@ -10,6 +10,7 @@ import Projects from './pages/Projects';
 import Certificates from './pages/Certificates';
 import Skills from './pages/Skills';
 import Dashboard from './pages/Dashboard';
+import Aboutme from './pages/Aboutme';
 import NotFound from './pages/NotFound';
 import Layout1 from './Layouts/Layout1';
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/skill" element={<Skills />} />
           <Route path="/certificate" element={<Certificates />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/aboutme" element={<Aboutme />} />
         </Route>
         
         {/* 404 Route without Layout */}

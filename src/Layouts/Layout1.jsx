@@ -30,7 +30,7 @@ const Layout1 = () => {
     <>
       <Navbar isDrawerOpen={isDrawerOpen} toggleDrawer={openDrawer}></Navbar>
       <Sidebar isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}></Sidebar>
-      <div className="p-4 sm:ml-64 bg-gray-100 dark:bg-gray-900 text-gray-200" 
+      <div className="p-4 sm:ml-64 bg-gray-100 dark:bg-gray-900" 
         onClick={closeDrawer}
         >
         <ScrollToTop/>

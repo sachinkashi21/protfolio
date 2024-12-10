@@ -22,7 +22,7 @@ export default function Navbar({isDraweropen,toggleDrawer}) {
                      <i className="fa-solid fa-bars w-8" aria-hidden="true"></i>
                   </button>
                   <div onClick={()=>navigate("/dashboard")} className="flex ms-2 md:me-24">
-                     <img src={logo} className="h-8 me-3" alt="Sachin Logo" />
+                     <img src={logo} className="h-12 me-3" alt="Sachin Logo" />
                      <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Sachin A</span>
                   </div>
                </div>

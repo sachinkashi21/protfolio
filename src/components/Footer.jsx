@@ -10,8 +10,8 @@ const Footer = () => {
                 <div className="sm:flex sm:items-center sm:justify-between">
                     {/* Logo and Name */}
                     <div onClick={() => navigate("/")} className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse cursor-pointer">
-                        <img src={logo} className="h-8" alt="Sachin Logo" />
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sachin</span>
+                        <img src={logo} className="h-12" alt="Sachin Logo" />
+                        <div className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sachin</div>
                     </div>
                     
                     {/* Tech Stack */}
