@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section className="px-6 py-12 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold mb-4">In short</h2>
+        <h2 className="text-3xl font-semibold mb-4">About me</h2>
         <p className="text-lg mb-6">
           I am a passionate web developer with a strong focus on the MERN stack. With experience in full-stack development, I
           enjoy creating interactive, user-friendly applications. My skill set includes not only technical expertise but also a
@@ -57,9 +57,9 @@ const Home = () => {
             redirectUrl="/dashboard" 
           />
         </div>
-        <hr className="border-0 h-px bg-gray-300 dark:bg-gray-900 my-4 mx-auto w-3/4" />
+        {/* <hr className="border-0 h-px bg-gray-300 dark:bg-gray-900 my-4 mx-auto w-3/4" /> */}
         <About/>
-        <hr className="border-0 h-px bg-gray-100 dark:bg-gray-900 my-4 mx-auto w-3/4" />
+        {/* <hr className="border-0 h-px bg-gray-100 dark:bg-gray-900 my-4 mx-auto w-3/4" /> */}
       </div>
     </>
   );
