@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import photo from '../assets/Sachin3.jpeg';
+import photo from '../assets/Sachin1.jpeg';
 import { FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     const [text, setText] = useState('');
     const typewritingText = "Annd I am a Full Stack Web Developer";
     const speed = 100; // typing speed in milliseconds
@@ -13,7 +13,7 @@ const Hero = () => {
         setText("");
         let index = 0;
         const typeEffect = () => {
-            if (index < typewritingText.length-1) {
+            if (index < typewritingText.length - 1) {
                 setText((prev) => prev + typewritingText[index]);
                 index++;
             } else {
@@ -38,15 +38,28 @@ const Hero = () => {
                         &nbsp;
                         <FaArrowRight />
                     </div>
-                    <div onClick={()=> window.open(import.meta.env.VITE_RESUME_LINK, "_blank")} className="inline-flex items-center justify-center px-5 py-3 mx-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                    <div onClick={() => window.open(import.meta.env.VITE_RESUME_LINK, "_blank")} className="inline-flex items-center justify-center px-5 py-3 mx-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                         Resume
                     </div>
                 </div>
                 <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                    <img src={photo} alt="mockup"/>
+                    <div className="relative w-80 h-80 overflow-hidden">
+
+                        <img
+                            src={photo}
+                            alt="Sachin"
+                            className="absolute top-0 left-0 w-full h-full object-cover"
+                            style={{ clipPath: 'polygon(35% 0, 85% 0%, 85% 100%, 0% 100%)' }}
+                            loading="lazy"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white font-bold text-xl">
+                            MERN Developer
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
     );
 };
 
