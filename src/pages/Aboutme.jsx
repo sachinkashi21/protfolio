@@ -3,9 +3,7 @@ import { FaGithub, FaLinkedin, FaCode, FaTwitter, FaFacebook, FaInstagram, FaBir
 import Timeline from '../components/Timeline';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import { FaChalkboardUser } from 'react-icons/fa6';
-
 import { FaLightbulb, FaRocket, FaNetworkWired } from 'react-icons/fa';
-
 import photo from "../assets/Sachin1.jpeg";
 
 const MyTimeline = () => {
@@ -104,7 +102,6 @@ const MyProfiles = () => {
     );
 };
 
-
 const InterestsAndGoals = () => {
     return (
         <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col items-center py-10 mb-8">
@@ -165,9 +162,6 @@ const InterestsAndGoals = () => {
     );
 };
 
-
-
-
 const Aboutme = () => {
     return (
         <>
@@ -197,6 +191,7 @@ const Aboutme = () => {
                 </div>
                 <div style={{ height: "50px" }}> </div>
             </div>
+
             <MyTimeline />
             <InterestsAndGoals/>
             <MyProfiles />

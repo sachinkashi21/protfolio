@@ -12,6 +12,7 @@ import Skills from './pages/Skills';
 import Dashboard from './pages/Dashboard';
 import Aboutme from './pages/Aboutme';
 import NotFound from './pages/NotFound';
+import Signup from './pages/Signup';
 import Layout1 from './Layouts/Layout1';
 
 import ScrollToTop from './components/ScrollToTop';
@@ -32,6 +33,8 @@ function App() {
         </Route>
         
         {/* 404 Route without Layout */}
+        <Route path='/signup' element={<Signup/>}></Route>
+        <Route path='/login' element={<Signup/>}></Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
