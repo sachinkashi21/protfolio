@@ -13,7 +13,7 @@ const certificates = [
   },
   {
     title: "Full Stack Web Development",
-    description: "A comprehensive course covering MERN stack development and ",
+    description: "A comprehensive course covering MERN stack development and deploying application",
     date: "Aug-Dec 2023",
     organization: "Apna College",
     skills: ["MongoDB","React","Express","NodeJS","Java Script","HTML","Vanilla CSS"],
@@ -21,15 +21,15 @@ const certificates = [
   },
   {
     title: "Google Cloud-Computing foundations and GenAI",
-    description: "Secured 2nd place at the state level and was a national finalist in the BIT N BUILD national hackathon conducted by GDSC CRCE, Mumbai",
+    description: "Hands on lab with google's cloud platform, quick sessions to use GenAI APIs and build projects",
     date: "October 2023",
     organization: "Google Developers Students Club",
-    skills: [],
+    skills: ["Google Cloud","GENAI","APIs"],
     imageUrl: "https://via.placeholder.com/400x250",
   },
   {
     title: "Soft Skill Development",
-    description: "",
+    description: "Session to tarin individual professionally and personally, to enhance soft skills",
     date: "January 2024",
     organization: "Quantech Origins",
     skills: ["Leadership","TeamWork","Problem Solving"],
